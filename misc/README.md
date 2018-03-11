@@ -9,7 +9,7 @@
 
 详见这篇[博文](http://www.litianyi.me/2017/01/01/lois-github/)和我曾参与的开源项目 [Archeo-Lex](https://github.com/Legilibre/Archeo-Lex) 以及[法国外国人法典](https://github.com/tianyikillua/ceseda)。运用这个类比，可以运用软件工程中的版本管理系统（比如 `git`）进行法律法典修订历史的可视化，运用 `diff` 更好地展现出每次改动。
 
-本库将这套类比运用在[中华人民共和国宪法](https://zh.wikipedia.org/zh-hans/中华人民共和国宪法)上。宪法内容记录在一个 Markdown 文件 [Constitution.md](https://github.com/tianyikillua/chinese-constitution/blob/master/Constitution.md) 中，每次修改表示为一个对其的 `commit`，可通过 `diff` 更好地了解改动。完整修订历史可以在 [Commits](https://github.com/tianyikillua/chinese-constitution/commits) 页面看到。四个版本的宪法（54、75、78和82）以及现行宪法（经过 2004 年的修宪）用 `tags` 表示。
+本库将这套类比运用在[中华人民共和国宪法](https://zh.wikipedia.org/zh-hans/中华人民共和国宪法)上。宪法内容记录在一个 Markdown 文件 [Constitution.md](https://github.com/tianyikillua/chinese-constitution/blob/master/Constitution.md) 中，每次修改表示为一个对其的 `commit`，可通过 `diff` 更好地了解改动。完整修订历史可以在 [Commits](https://github.com/tianyikillua/chinese-constitution/commits) 页面看到。四个版本的宪法（54、75、78和82）以及现行宪法（经过 2018 年的修宪）用 `tags` 表示。
 
 1. 1954年09月20日第一届全国人民代表大会第一次会议通过了新中国第一本宪法；
 2. 1975年01月17日第四届全国人民代表大会第一次会议与1978年03月05日第五届全国人民代表大会第一次会议对五四宪法进行大修；考虑到其规模之大，这里将它们考虑为两个从五四宪法导出的两个独立的版本分支 `branch`；
@@ -34,3 +34,6 @@
 |/  
 * 1954年09月20日第一届全国人民代表大会第一次会议通过 (tag: 1954宪法)
 ```
+Github 网站提供的 `diff` 可视化更方便理解每次修宪的改动，如下图（1999年03月15日第九届全国人民代表大会第二次会议之修宪）。
+
+![](https://github.com/tianyikillua/chinese-constitution-src/raw/master/misc/diff.png)
