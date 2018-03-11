@@ -15,7 +15,7 @@ subprocess.call(["git", "checkout",
                 cwd=repo)
 
 # Add README
-f = "texts/README.md"
+f = "misc/README.md"
 shutil.copy(f, os.path.join(repo, "README.md"))
 subprocess.call(["git", "add", "README.md"], cwd=repo)
 subprocess.call(["git", "commit",
@@ -23,10 +23,6 @@ subprocess.call(["git", "commit",
                  "-q", "--no-status"], cwd=repo)
 
 for f in sorted(glob.glob("texts/*.md")):
-
-    # Skip README
-    if "README" in f:
-        continue
 
     # Metadata
     data = os.path.splitext(os.path.basename(f))[0]
@@ -60,11 +56,6 @@ for f in sorted(glob.glob("texts/*.md")):
 
     # Commit
     subprocess.call(["git", "add", "Constitution.md"], cwd=repo)
-
-    # Special name for the newly proposal
-    if "2018" in date:
-        author = "中国共产党中央委员会 <>"
-
     subprocess.call(["git", "commit", "--author=%s" % author,
                      "--date=%s" % date, "-m %s" % message,
                      "-q", "--no-status"], cwd=repo)
@@ -78,5 +69,5 @@ for f in sorted(glob.glob("texts/*.md")):
         subprocess.call(["git", "tag", "1978宪法"], cwd=repo)
     elif "1982" in date:
         subprocess.call(["git", "tag", "1982宪法"], cwd=repo)
-    elif "2004" in date:
+    elif "2018" in date:
         subprocess.call(["git", "tag", "现行宪法"], cwd=repo)
